@@ -1,0 +1,15 @@
+# Virtual environments
+venv/
+.venv/
+calculator/
+
+# Python cache and generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example

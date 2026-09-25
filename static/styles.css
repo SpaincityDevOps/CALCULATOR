@@ -1,0 +1,145 @@
+:root {
+    color-scheme: dark;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    background: #101214;
+    color: #f4f7f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 280px;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, #293039 0, #15181b 45%, #0b0d0f 100%);
+}
+
+.calculator-shell {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: clamp(1rem, 4vw, 3rem);
+}
+
+.calculator {
+    width: min(100%, 27rem);
+    padding: clamp(1.25rem, 5vw, 2rem);
+    border: 1px solid #343a40;
+    border-radius: 1.5rem;
+    background: #1b1f23;
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 35%);
+}
+
+.calculator-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+    margin: 0;
+    color: #f3a446;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
+    font-weight: 600;
+}
+
+.display {
+    width: 100%;
+    min-height: 4.75rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    overflow: hidden;
+    border: 1px solid #394149;
+    border-radius: 0.85rem;
+    background: #101214;
+    color: #f4f7f8;
+    font: 500 clamp(1.75rem, 8vw, 2.5rem)/1.2 "Cascadia Code", Consolas, monospace;
+    text-align: right;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.5rem, 2vw, 0.75rem);
+}
+
+.key {
+    min-width: 0;
+    min-height: clamp(3.25rem, 14vw, 4.25rem);
+    border: 1px solid #343a40;
+    border-radius: 0.8rem;
+    background: #292e34;
+    color: #f4f7f8;
+    cursor: pointer;
+    font: 600 clamp(1rem, 4vw, 1.25rem)/1 "Trebuchet MS", sans-serif;
+    transition: background 120ms ease, transform 120ms ease, border-color 120ms ease;
+    touch-action: manipulation;
+}
+
+.key:hover {
+    border-color: #69737d;
+    background: #343b43;
+}
+
+.key:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.key:focus-visible {
+    outline: 3px solid #f3a446;
+    outline-offset: 2px;
+}
+
+.key-muted {
+    background: #22272c;
+    color: #c3cbd1;
+}
+
+.key-operator {
+    background: #343b43;
+    color: #f3a446;
+}
+
+.key-equals {
+    grid-row: span 2;
+    background: #d97722;
+    border-color: #f3a446;
+    color: #17191b;
+}
+
+.key-equals:hover {
+    background: #ee8d2f;
+}
+
+.key-zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 360px) {
+    .calculator {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .keypad {
+        gap: 0.4rem;
+    }
+
+    .key {
+        min-height: 3.1rem;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

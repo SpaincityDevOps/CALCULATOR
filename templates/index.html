@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main class="calculator-shell">
+        <section class="calculator" aria-label="Calculator">
+            <header class="calculator-header">
+                <p class="eyebrow">QUICK CALC</p>
+                <h1>Calculator</h1>
+            </header>
+            <input id="display" class="display" type="text" inputmode="decimal" readonly aria-label="Calculator display" value="">
+            <div class="keypad" aria-label="Calculator keys">
+                <button class="key key-muted" type="button" data-action="clear">AC</button>
+                <button class="key key-muted" type="button" data-action="delete" aria-label="Delete last character">DEL</button>
+                <button class="key key-muted" type="button" data-value="%">%</button>
+                <button class="key key-operator" type="button" data-value="^">^</button>
+                <button class="key" type="button" data-value="7">7</button>
+                <button class="key" type="button" data-value="8">8</button>
+                <button class="key" type="button" data-value="9">9</button>
+                <button class="key key-operator" type="button" data-value="/">/</button>
+                <button class="key" type="button" data-value="4">4</button>
+                <button class="key" type="button" data-value="5">5</button>
+                <button class="key" type="button" data-value="6">6</button>
+                <button class="key key-operator" type="button" data-value="*">*</button>
+                <button class="key" type="button" data-value="1">1</button>
+                <button class="key" type="button" data-value="2">2</button>
+                <button class="key" type="button" data-value="3">3</button>
+                <button class="key key-operator" type="button" data-value="-">-</button>
+                <button class="key key-zero" type="button" data-value="0">0</button>
+                <button class="key" type="button" data-value=".">.</button>
+                <button class="key key-operator" type="button" data-value="+">+</button>
+                <button class="key key-equals" type="button" data-action="calculate">=</button>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
