@@ -2,6 +2,10 @@
 
 A responsive web calculator built with Flask, vanilla JavaScript, HTML, and CSS. It supports arithmetic sequences, percentages, exponent syntax, keyboard input, and safe server-side expression evaluation.
 
+<img width="1679" height="915" alt="main" src="https://github.com/user-attachments/assets/f103f977-abb9-4be1-a7db-b5467a812874" />
+<img width="1679" height="916" alt="1+1" src="https://github.com/user-attachments/assets/0cbd4e86-997c-4b87-b7b0-3886c51ad0ab" />
+<img width="1679" height="912" alt="results" src="https://github.com/user-attachments/assets/2886f5b7-fe4f-474e-b641-b6b58fe8501f" />
+
 ## GitHub description
 
 Responsive Flask calculator with safe arithmetic evaluation, keyboard support, and a modern dark interface.
